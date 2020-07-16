@@ -1,0 +1,249 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="msapplication-TileColor" content="#1A0066"/>
+<meta name="msapplication-TileImage" content="/images/win8_symbol_140x140.png"/>
+<title>{$SiteName/}_首页</title>
+{$MetaKeywords/}
+{$MetaDescription/}
+{ZL:Boot()/}
+<link href="{$CssDir/}global.css?Version={ZL.Label id="前端样式版本号"/}" rel="stylesheet"/>
+<link rel="stylesheet" href="dist/css/swiper.min.css"/>
+<script src="dist/js/swiper.min.js"></script>
+<script src="/js/scrolltopcontrol.js"></script>
+<script src="/JS/Controls/B_User.js"></script>
+</head>
+<body>
+<div class="home_top hidden-xs">
+<div class="container">
+<span>证券资讯，欢迎您回家！</span>
+<ul>
+<li class="nav_user dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true"><i class="fa fa-user"></i> 登录 <i class="fa fa-caret-down"></i></a>
+<ul class="dropdown-menu" role="menu">
+<li><a href="/User/Login?ReturnUrl=/">用户登录</a></li>
+<li><a href="/User/Register" target="_blank">用户注册</a></li>
+<li><a href="/User/">会员中心</a></li>
+<li><a href="javascript:;" onClick="LogoutFun();">安全退出</a></li>
+</ul>
+</li>
+<li><a href="tel:18888888888"><i class="fa fa-phone"></i> 联系我们</a></li>
+<li><a href="/search/Searchlist"><i class="fa fa-search"></i></a></li>
+</ul>
+</div>
+</div>
+<!--home_top end-->
+
+<div class="home17_nav home_nav" id="home_nav">
+<nav class="navbar navbar-default">
+<div class="container">
+<!-- Brand and toggle get grouped for better mobile display -->
+<div class="navbar-header">
+<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+<span class="sr-only">Toggle navigation</span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+</button>
+<h1><a class="navbar-brand" href="/"><img src="{$CssDir/}images/logo.png" alt="{$SiteName/}" /></a></h1>
+</div>
+<!-- Collect the nav links, forms, and other content for toggling -->
+<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+<ul class="nav navbar-nav navbar-right">
+<li class="active"><a href="/">首页 </a></li>
+<li id="nid1"><a href="{ZL:GetNodeLinkUrl(1)/}">财富终端</a></li>
+<li class="dropdown">
+<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">多空策略 <span class="caret"></span></a>
+<ul class="dropdown-menu" role="menu">
+<li id="nid6"><a href="{ZL:GetNodeLinkUrl(6)/}">栏目</a></li>
+<li id="nid7"><a href="{ZL:GetNodeLinkUrl(7)/}">电刊</a></li>
+</ul>
+</li>
+<li class="dropdown">
+<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">投资课堂 <span class="caret"></span></a>
+<ul class="dropdown-menu" role="menu">
+<li><a href="{ZL:GetNodeLinkUrl(8)/}">大咖来了</a></li>
+<li><a href="{ZL:GetNodeLinkUrl(9)/}">课程学习</a></li>
+</ul>
+</li>
+<li class="nav_about"><a href="{ZL:GetInfoUrl(3)/}">关于我们</a></li>
+</ul>
+</div><!-- /.navbar-collapse -->
+</div><!-- /.container-fluid -->
+</nav>
+</div>
+<!--home_nav end-->
+
+<div class="home_banner">
+<!-- Swiper -->
+<div class="swiper-container">
+<div class="swiper-wrapper">
+<div class="swiper-slide banner1"></div>
+<div class="swiper-slide banner2"></div>
+<div class="swiper-slide banner3"></div>
+</div>
+<!-- Add Pagination -->
+<div class="swiper-pagination"></div>
+<!-- Add Arrows -->
+<div class="swiper-button-next"></div>
+<div class="swiper-button-prev"></div>
+</div>
+</div>
+<!--home_banner end-->
+
+<div class="container home_stu">
+<div class="row">
+<div class="home_line_title">
+<h2>投资课堂</h2>
+<h3>INVESTMENT CLASSROOM</h3>
+</div>
+{ZL.Label id="获取首页推荐视频正式版" NodeID="9" ShowNum="1" /}
+</div>
+</div>
+<!--home_stu end-->
+
+
+<div class="container home_info">
+<div class="row">
+<div class="home_line_title">
+<h2>全领域大资讯平台</h2>
+<h3>CONSULTATION PALTFORM</h3>
+</div>
+<div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+<div class="home_info_ico"><i class="fa fa-globe" aria-hidden="true"></i></div>
+<div class="home_info_title">发挥新媒体优势</div>
+<p>为全网用户带来全领域<br/>更垂直的独家资讯</p>
+</div>
+<div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+<div class="home_info_ico"><i class="fa fa-compass" aria-hidden="true"></i></div>
+<div class="home_info_title">坚定国家媒体传播方向</div>
+<p>正向引导股民，净化投资理财市场，规范投资理财操作</p>
+</div>
+<div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+<div class="home_info_ico"><i class="fa fa-user-circle-o" aria-hidden="true"></i></div>
+<div class="home_info_title">坚持以用户为中心</div>
+<p>做全国最有品质的<br/>投资理财内容</p>
+</div>
+<div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+<div class="home_info_ico4">
+<span class="fa-stack fa-lg">
+  <i class="fa fa-circle-o fa-stack-2x"></i>
+  <i class="fa fa-lightbulb-o fa-stack-1x "></i>
+</span>
+</div>
+<div class="home_info_title">坚持改革创新</div>
+<p>兼容并包，依托移动互联网，打开立体化传播新途径</p>
+</div>
+</div>
+</div>
+<!--home_info end-->
+
+<div class="home_banner2">
+<div class="home_banner2_pic"></div>
+<div class="container">
+<p>《多空策略》是以华尔街最前沿的拓扑分析法，以“策略”为核心在纷乱的信息里，厘清市场的主线。经由数据统计、概率分析，并结合NTB交易体系，形成极具实战价值的市场策略。同时结合独创的SMART交易体系，精准判断市场时机及投资，进行安全理性交易，在确保资金安全前提下，获得稳定收益。</p>
+</div>
+</div>
+<!--多空策略结束-->
+
+<div class="container home_about">
+<div class="home_line_title">
+<h2>关于我们</h2>
+<h3>ABOUT US</h3>
+</div>
+<div class="pull-left"><img src="{$CssDir/}images/home_about.jpg" alt="关于CCTV证券" /></div>
+<div class="home_about_r">
+<p>CCTV证券资讯频道隶属于中央新影数字传媒有限公司，是由广电总局批准、中国证监会支持、前证监会主席尚福林授名、中央电视台控股、注册资本1.2亿元的大型现代传媒国有企业。本着为投资者提供专业服务的宗旨，专家、业内资深人士、交易团队和专业评论员对国内外政策新闻和市场深度解读，梳理投资脉络，发表专业观点，为投资者提供操作依据的节目全天贯穿频道始终。<br/>
+节目内容不仅囊括证券市场，也覆盖了大宗商品交易市场和外汇交易市场。作为一家辐射全国(包括香港、台湾)、制作并提供证券资讯节目的数字电视专业化财经频道，CCTV证券资讯频道具有专注度高、覆盖面广、专业性强的特点，一经开播就深受广大投资者喜爱，成为赢利能力最强的数字频道之一，被称为数字频道中的火车头。</p>
+<div class="home_red_link"><a href="{ZL:GetInfoUrl(3)/}">了解详情 ></a></div>
+</div>
+</div>
+<!--home_about end-->
+
+<div class="footer">
+<div class="container">
+<h3><span>友情链接</span></h3>
+<ul>
+{ZL.Label id="友情链接列表" ShowNum="10" NodeID="5" /}
+<li><a href="{ZL:GetNodeLinkUrl(5)/}">More+</a>
+<div class="clearfix"></div>
+</ul>
+<div class="footer_copy">
+{$Copyright/}
+</div>
+</div>
+</div>
+</body>
+</html>
+<script>
+//检测固顶事件
+var IO=document.getElementById('home_nav'),Y=IO,H=0,IE6;
+IE6=window.ActiveXObject&&!window.XMLHttpRequest;
+while(Y){H+=Y.offsetTop;Y=Y.offsetParent};
+if(IE6)
+    IO.style.cssText="position:absolute;top:expression(this.fix?(document"+
+        ".documentElement.scrollTop-(this.javascript||"+H+")):0)";
+window.onscroll=function (){
+    var d=document,s=Math.max(d.documentElement.scrollTop,document.body.scrollTop);
+     if(s>H&&IO.fix||s<=H&&!IO.fix)return;
+    if(!IE6)IO.style.position=IO.fix?"":"fixed";        
+    IO.fix=!IO.fix;
+};
+try{document.execCommand("BackgroundImageCache",false,true)}catch(e){};
+
+
+$(function () {//手机下右侧导航菜单效果
+    $('button.navbar-toggle').click(function () {
+        $('body').toggleClass('out');
+        $('nav.navbar-fixed-top').toggleClass('out');
+        if ($('body').hasClass('out')) {
+            $(this).focus();
+        }
+        else {
+            $(this).blur();
+        }
+    });
+});
+$(document).click(function (e) {
+    if (!$(e.target).closest('.navbar-collapse, button.navbar-toggle').length && $('body').hasClass('out')) {
+        e.preventDefault();
+        $('button.navbar-toggle').trigger('click');
+    }
+}).keyup(function (e) {
+    if (e.keyCode == 27 && $('body').hasClass('out')) {
+        $('button.navbar-toggle').trigger('click');
+    }
+});
+
+var swiper = new Swiper('.swiper-container', {
+    pagination: '.swiper-pagination',
+    paginationClickable: true,
+    autoplay:3500,
+	paginationClickable: '.swiper-pagination',
+	nextButton: '.swiper-button-next',
+	prevButton: '.swiper-button-prev',
+	loop: true,
+	keyboardControl : true
+});
+
+var buser = new B_User();//会员ajax登录状态需要结合JS/Controls/B_User.js引用同步生效
+buser.IsLogged(function(data,flag){
+	if(flag)
+	{
+		data=JSON.parse(data);
+		$(".nav_user>a").html("<i class='fa fa-user'></i> "+data.UserName+" <i class='fa fa-caret-down'></i>");
+        $(".nav_user .dropdown-menu li:nth-child(1)").hide();
+		$(".nav_user .dropdown-menu li:nth-child(2)").hide();
+        $(".nav_user .dropdown-menu li:nth-child(3)").show();
+        $(".nav_user .dropdown-menu li:nth-child(4)").show();
+	}else{
+        $(".nav_user .dropdown-menu li:nth-child(3)").hide();
+        $(".nav_user .dropdown-menu li:nth-child(4)").hide();
+    }
+});
+function LogoutFun()
+{
+	buser.Logout(function(){location=location;});
+}
+
+</script>

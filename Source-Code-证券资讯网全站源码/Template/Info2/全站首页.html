@@ -1,0 +1,291 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="msapplication-TileColor" content="#1A0066"/>
+<meta name="msapplication-TileImage" content="/images/win8_symbol_140x140.png"/>
+<title>{$SiteName/}_首页</title>
+{$MetaKeywords/}
+{$MetaDescription/}
+{ZL:Boot()/}
+<link href="{$CssDir/}global.css?Version={ZL.Label id="前端样式版本号"/}" rel="stylesheet"/>
+<link rel="stylesheet" href="dist/css/swiper.min.css"/>
+<script src="dist/js/swiper.min.js"></script>
+<script src="/js/scrolltopcontrol.js"></script>
+<script src="/JS/Controls/B_User.js"></script>
+</head>
+<body>
+<!--home_top end-->
+<div class="home17_nav home_nav" id="home_nav">
+<nav class="navbar navbar-default">
+<div class="container">
+<!-- Brand and toggle get grouped for better mobile display -->
+<div class="navbar-header">
+<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+<span class="sr-only">Toggle navigation</span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+</button>
+<h1><a class="navbar-brand" href="/"><img src="{$CssDir/}images/logo.png" alt="{$SiteName/}" /></a> <span class="logo_t"><a href="/">《时间定势》</a></span></h1>
+</div>
+<!-- Collect the nav links, forms, and other content for toggling -->
+<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+<div class="hide_nav">
+<ul class="nav navbar-nav navbar-right home_top_nav">
+<li class="active"><a href="/">首页</a></li>
+<li id="nid3"><a href="{ZL:GetNodeLinkUrl(3)/}">投资视点</a></li>
+<li id="nid15"><a href="{ZL:GetNodeLinkUrl(15)/}">产品介绍</a></li>
+<li id="nid4"><a href="{ZL:GetNodeLinkUrl(4)/}">关于我们</a></li>
+<li id="nid1"><a href="{ZL:GetNodeLinkUrl(1)/}">研发背景</a></li>
+<li id="nid19"><a href="{ZL:GetNodeLinkUrl(19)/}">点点投顾</a></li>
+<li class="dropdown">
+<a class=" dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-expanded="true" style="cursor:pointer;">
+股票专题
+<span class="caret"></span>
+</a>
+<ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu2">
+<li role="presentation" id="nid17"><a role="menuitem" tabindex="-1" href="{ZL:GetNodeLinkUrl(17)/}">股票推广</a></li>
+<li role="presentation" id="nid18"><a role="menuitem" tabindex="-1" href="{ZL:GetNodeLinkUrl(18)/}">盘中雷达</a></li>
+</ul>
+</li>
+<li class="hidden-xs"><a href="javascript:;" onClick="isSearch();"><i class="fa fa-search"></i></a></li>
+</ul>
+<ul class="nav navbar-nav navbar-right home_search hidden-xs">
+<form class="navbar-form navbar-left" role="search" action="/Search/SearchList" target="_blank">
+<i class="fa fa-search"></i>
+<input type="text" class="form-control" placeholder="输入关键字，回车查询" name="keyword" />
+<a onClick="isClose();"><i class="fa fa-close" style="color:#fff;"></i></a>
+</form>
+</ul>
+</div>
+</div><!-- /.navbar-collapse -->
+</div><!-- /.container-fluid -->
+</nav>
+</div>
+<!--home_nav end-->
+
+<div class="home_banner">
+<!-- Swiper -->
+<div class="swiper-container">
+<div class="swiper-wrapper">
+<div class="swiper-slide banner1"></div>
+<div class="swiper-slide banner3"></div>
+</div>
+<!-- Add Pagination -->
+<div class="swiper-pagination"></div>
+<!-- Add Arrows -->
+<div class="swiper-button-next"></div>
+<div class="swiper-button-prev"></div>
+</div>
+</div>
+<!--home_banner end-->
+
+<div class="home_ad">
+<div class="container">
+<div class="ad_t">
+<p>时间定势——国内一流证券信息加工商！</p>
+<p>您身边的投资专家</p>
+<p>为您的证券投资审时度势！</p>
+<div class="ad_bg"></div>
+</div>
+<strong>财富专线:400-048-2520</strong>
+</div>
+</div>
+<!-- home_ad end! -->
+
+<div class="home_histroy container">
+<div class="histroy_t">
+<h2>历史战绩</h2>
+</div>
+<div class="table-responsive"> 
+<table class="table table-bordered table-striped table-hover">
+<thead>
+<tr>
+	<td>股票名称</td>
+	<td>股票代码</td>
+	<td>介入时期</td>
+	<td>介入价格</td>
+	<td>持股时间（交易日）</td>
+	<td>涨跌幅</td>
+</tr>
+</thead>
+<tbody>
+<tr>
+	<td>昊华能源</td>
+	<td>601101</td>
+	<td>2017/07/04</td>
+	<td>8.76</td>
+	<td>19天</td>
+	<td>41.32%</td>
+</tr>
+<tr>
+	<td>赣锋锂业</td>
+	<td>002460</td>
+	<td>2017/07/06</td>
+	<td>48.70</td>
+	<td>19天</td>
+	<td>45.05%</td>
+</tr>
+<tr>
+	<td>云海金属</td>
+	<td>002182</td>
+	<td>2017/07/27</td>
+	<td>11.20</td>
+	<td>3天</td>
+	<td>30.18%</td>
+</tr>
+<tr>
+	<td>盛和资源</td>
+	<td>600390</td>
+	<td>2017/07/27</td>
+	<td>16.66</td>
+	<td>7天</td>
+	<td>36.13%</td>
+</tr>
+<tr>
+	<td>方大特钢</td>
+	<td>600507</td>
+	<td>2017/08/02</td>
+	<td>11.90</td>
+	<td>3天</td>
+	<td>19.75%</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<!-- home_histroy end! -->
+
+<div class="home_expert container">
+<div class="expert_t">
+<i class="fa fa-chevron-right"></i><a href="{ZL:GetNodeLinkUrl(13)/}">专家点评</a><a href="{ZL:GetNodeLinkUrl(13)/}" class="pull-right">更多+</a>
+</div>
+<div class="row">
+{ZL.Label id="首页专家点评" NodeID="13" ShowNum="2" TitleNum="60" /}
+
+</div>
+</div>
+<!-- home_expert end! -->
+
+<div class="home_sole container home_expert">
+<div class="expert_t">
+<i class="fa fa-chevron-right"></i><a href="{ZL:GetNodeLinkUrl(16)/}">独家视点</a><a href="{ZL:GetNodeLinkUrl(16)/}" class="pull-right">更多+</a>
+</div>
+<div class="row">
+{ZL.Label id="首页独家视点" NodeID="16" ShowNum="3" TitleNum="30" /}
+</div>
+</div>
+<!-- home_sole end! -->
+
+<div class="footer">
+<div class="container">
+<h3><span>友情链接</span></h3>
+<ul>
+{ZL.Label id="友情链接列表" ShowNum="10" NodeID="5" /}
+<li><a href="{ZL:GetNodeLinkUrl(5)/}">More+</a></li>
+<div class="clearfix"></div>
+</ul>
+<div class="footer_copy">
+{$Copyright/}
+</div>
+</div>
+</div>
+<!--客服-->
+<div class="kefu hidden-xs">
+<ul>
+<li><a href="tel:028-62613672"><span>联系我们</span><i class="fa fa-phone"></i></a><div class="clearfix"></div></li>
+<li><a href="http://wpa.qq.com/msgrd?v=3&uin=3238203532&site=qq&menu=yes" target="_blank"><span>在线客服</span><i class="fa  fa-qq"></i></a><div class="clearfix"></div></li>
+<li class="kefu_wechat"><a href="javascript:;"><span><img src="{$CssDir/}images/Big_Micro.jpg" alt="微信二维码" /></span><i class="fa fa-wechat"></i></a><div class="clearfix"></div></li>
+<li><a href="/Guest" target="_blank"><span>留言咨询</span><i class="fa fa-pencil"></i></a><div class="clearfix"></div></li>
+</ul>
+</div>
+</body>
+</html>
+
+<script>
+
+//检测固顶事件
+var IO=document.getElementById('home_nav'),Y=IO,H=0,IE6;
+IE6=window.ActiveXObject&&!window.XMLHttpRequest;
+while(Y){H+=Y.offsetTop;Y=Y.offsetParent};
+if(IE6)
+    IO.style.cssText="position:absolute;top:expression(this.fix?(document"+
+        ".documentElement.scrollTop-(this.javascript||"+H+")):0)";
+window.onscroll=function (){
+    var d=document,s=Math.max(d.documentElement.scrollTop,document.body.scrollTop);
+     if(s>H&&IO.fix||s<=H&&!IO.fix)return;
+    if(!IE6)IO.style.position=IO.fix?"":"fixed";        
+    IO.fix=!IO.fix;
+};
+
+try{document.execCommand("BackgroundImageCache",false,true)}catch(e){};
+$(function () {//手机下右侧导航菜单效果
+    $('button.navbar-toggle').click(function () {
+        $('body').toggleClass('out');
+        $('nav.navbar-fixed-top').toggleClass('out');
+        if ($('body').hasClass('out')) {
+            $(this).focus();
+        }
+        else {
+            $(this).blur();
+        }
+    });
+});
+
+$(document).click(function (e) {
+    if (!$(e.target).closest('.navbar-collapse, button.navbar-toggle').length && $('body').hasClass('out')) {
+        e.preventDefault();
+        $('button.navbar-toggle').trigger('click');
+    }
+}).keyup(function (e) {
+    if (e.keyCode == 27 && $('body').hasClass('out')) {
+        $('button.navbar-toggle').trigger('click');
+    }
+});
+
+
+var swiper = new Swiper('.swiper-container', {
+    pagination: '.swiper-pagination',
+    paginationClickable: true,
+    autoplay:3500,
+	paginationClickable: '.swiper-pagination',
+	nextButton: '.swiper-button-next',
+	prevButton: '.swiper-button-prev',
+	loop: true,
+	keyboardControl : true
+});
+
+$(".kefu_qrcode img").attr("src","/Common/common.ashx?url="+encodeURI(window.location.href));
+
+/*显示搜索框*/
+function isSearch(){
+    $(".home_search").css("opacity","1").css("z-index","1").css("right","0");
+    $(".home_top_nav").fadeOut(200);
+    $(".home_search .form-control").focus();
+}
+/*关闭搜索框*/
+function isClose(){
+    $(".home_search").css("opacity","0").css("z-index","-1").css("right","-1em");
+    $(".home_top_nav").fadeIn(1000);
+}
+
+//滑动门避免点击
+$().ready(function(e) {
+ $(".carousel-inner .item:first-child").addClass("active");
+ $(".home_list .nav-tabs>li>a").mouseover(function(){
+  $(this).parent().addClass("active");
+  $(this).parent().siblings("li").removeClass("active");
+  $(this).parent().parent().parent().find(".tab-content .tab-pane").removeClass("active");
+  $($(this).data("tab")).addClass("active");
+ })
+})
+//下拉菜单避免点击
+$("#home_nav .navbar-nav .dropdown").mousemove(function(){
+ $(this).addClass("open");
+})
+$("#home_nav .navbar-nav .dropdown").mouseout(function(){
+ $(this).removeClass("open");
+})
+
+</script>

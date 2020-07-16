@@ -1,0 +1,52 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <Table>
+    <LabelID>323</LabelID>
+    <LabelName>获取首页推荐视频正式版</LabelName>
+    <LabelType>2</LabelType>
+    <LabelCate>证券资讯专用</LabelCate>
+    <LabelDesc />
+    <LabelParam>NodeID,0,1,节点ID|ShowNum,1,1,显示数</LabelParam>
+    <LabelTable>ZL_CommonModel LEFT JOIN ZL_C_video ON ZL_CommonModel.ItemID=ZL_C_video.ID</LabelTable>
+    <LabelField>ZL_CommonModel.GeneralID,ZL_C_video.author,ZL_C_video.content,ZL_C_video.Edit,ZL_C_video.ID,ZL_C_video.pic,ZL_C_video.source,ZL_C_video.synopsis,ZL_C_video.url,ZL_CommonModel.Title</LabelField>
+    <LabelWhere>(NodeID=@NodeID or FirstNodeID=@NodeID) And Status=99 And EliteLevel=1</LabelWhere>
+    <LabelOrder>GeneralID DESC</LabelOrder>
+    <LabelContent>&lt;div class="col-lg-7 col-md-7 col-sm-7 col-xs-12"&gt;
+&lt;div id="home_stu_video" class="home_stu_video"&gt;&lt;/div&gt;
+&lt;script type="text/javascript" src="/ckplayer/ckplayer.js" charset="utf-8"&gt;&lt;/script&gt;
+&lt;script type="text/javascript"&gt;
+    var flashvars={
+        f:'{Field="url"/}',
+        c:0,
+        i:'{ZL:GetPicUrl({Field="pic"/})/}',
+        v:50
+    };
+    var params={bgcolor:'#FFF',allowFullScreen:true,allowScriptAccess:'always',wmode:'transparent'};
+    var video=['/Video/黄杨 .mp4-&gt;video/mp4'];
+    CKobject.embed('/ckplayer/ckplayer.swf','home_stu_video','ckplayer_a1','100%','100%',false,flashvars,video,params);
+&lt;/script&gt;
+&lt;/div&gt;
+&lt;div class="col-lg-5 col-md-5 col-sm-5 col-xs-12"&gt;
+&lt;div class="home_stu_r"&gt;
+&lt;div class="home_stu_rtite"&gt;{Field="Title"/}&lt;/div&gt;
+&lt;p&gt;{Field="synopsis"/}&lt;/p&gt;
+&lt;div class="home_red_link"&gt;&lt;a href="{ZL:GetNodeLinkUrl(9)/}"&gt;更多视频  &gt;&lt;/a&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</LabelContent>
+    <LabelCount>@ShowNum</LabelCount>
+    <LabelAddUser>0</LabelAddUser>
+    <LabelNodeID>0</LabelNodeID>
+    <Modeltypeinfo>计数判断</Modeltypeinfo>
+    <addroot>循环计算</addroot>
+    <setroot>等于</setroot>
+    <Modelvalue />
+    <Valueroot />
+    <IsOpen>0</IsOpen>
+    <FalseContent />
+    <DataSourceType>{"ds_m":"main","ds_s":"main","tb_m":"ZL_CommonModel","tb_s":"ZL_C_video"}</DataSourceType>
+    <ConnectString />
+    <ProceName />
+    <ProceParam />
+  </Table>
+</NewDataSet>

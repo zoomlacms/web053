@@ -1,0 +1,134 @@
+﻿{ZL.Source id="节点栏目信息数据源"/}
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="msapplication-TileColor" content="#1A0066"/>
+<meta name="msapplication-TileImage" content="/images/win8_symbol_140x140.png"/>
+<title>{SField sid="节点栏目信息数据源" FD="NodeName" page="0"/}_{$SiteTitle/}</title>
+{$MetaKeywords/}
+{$MetaDescription/}
+{ZL:Boot()/}
+<link href="{$CssDir/}global.css?id={ZL.Label id="前端样式版本号"/}" rel="stylesheet"/>
+<script src="/js/scrolltopcontrol.js"></script>
+</head> 
+<body>
+{ZL.Label id="全站头部"/}
+<div class="about_banner"></div>
+
+<div class="about_list1 container">
+<h2>时间定势决策平台</h2>
+<p>
+栏目是由CCTV证券资讯频道倾力打造的一档国内顶尖级的电视栏目，栏目以独特的博弈视角，深度阐述当前市场环境下的应对策略，在实战分析中对趋势定性、提示市场策略应对、把脉热门评估、精化选股思路、解读买卖交易、凸显风险控制。
+它汇聚了业内专业的研究团队的智慧与精华，紧跟市场，解读多空博弈策略，依据团队投资能力打造国内最顶尖的实战投资密码，让投资不再盲从。股海莫测需指南，多空博弈有妙计，密码在手，胜券在握，财富触手可及！
+</p>
+<p><img src="{$CssDir/}images/about_logo.png" alt="时间定势"></p>
+</div>
+<!-- about_list1 end! -->
+
+<div class="about_channel">
+<div class="container">
+<h2>CCTV证券资讯频道</h2>
+<strong>由</strong><p>“CCTV 证券资讯频道”是经国家广播电视总局批准的，在全国范围播出的数字电视付费频道，也是一家可以辐射全国、制作并提供证券资讯节目的数字专业化频道。</p>
+<p class="about_logo2"><img src="{$CssDir/}images/about_logo2.png" alt="CCTV证券资讯频道"></p>
+</div>
+</div>
+<!--  about_channel end!-->
+
+<div class="about_address container">
+<h2>汇款地址</h2>
+<div class="table-responsive"> 
+<table class="table table-bordered table-hover">
+<thead>
+<tr>
+	<th>单位名称</th>
+	<th>开户行</th>
+	<th>账号</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+	<td>中央新影数字传媒有限公司</td>
+	<td>中国光大银行北京宣武支行</td>
+	<td>35040188000024810</td>
+</tr>
+<tr>
+	<td>中央新影数字传媒有限公司</td>
+	<td>中国工商银行北京北太平庄支行</td>
+	<td>0200010019200334539</td>
+</tr>
+<tr>
+	<td>中央新影数字传媒有限公司</td>
+	<td>中国农业银行北京新外支行</td>
+	<td>11020301040009431</td>
+</tr>
+<tr>
+<td  colspan="4">咨询电话：400-048-2520</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<!-- about_address end! -->
+
+{ZL.Label id="全站底部"/}
+</body>
+</html>
+<script>
+//检测固顶事件
+var IO=document.getElementById('home_nav'),Y=IO,H=0,IE6;
+IE6=window.ActiveXObject&&!window.XMLHttpRequest;
+while(Y){H+=Y.offsetTop;Y=Y.offsetParent};
+if(IE6)
+    IO.style.cssText="position:absolute;top:expression(this.fix?(document"+
+        ".documentElement.scrollTop-(this.javascript||"+H+")):0)";
+window.onscroll=function (){
+    var d=document,s=Math.max(d.documentElement.scrollTop,document.body.scrollTop);
+     if(s>H&&IO.fix||s<=H&&!IO.fix)return;
+    if(!IE6)IO.style.position=IO.fix?"":"fixed";        
+    IO.fix=!IO.fix;
+};
+try{document.execCommand("BackgroundImageCache",false,true)}catch(e){};
+
+
+$(function () {//手机下右侧导航菜单效果
+    $('button.navbar-toggle').click(function () {
+        $('body').toggleClass('out');
+        $('nav.navbar-fixed-top').toggleClass('out');
+        if ($('body').hasClass('out')) {
+            $(this).focus();
+        }
+        else {
+            $(this).blur();
+        }
+    });
+});
+$(document).click(function (e) {
+    if (!$(e.target).closest('.navbar-collapse, button.navbar-toggle').length && $('body').hasClass('out')) {
+        e.preventDefault();
+        $('button.navbar-toggle').trigger('click');
+    }
+}).keyup(function (e) {
+    if (e.keyCode == 27 && $('body').hasClass('out')) {
+        $('button.navbar-toggle').trigger('click');
+    }
+});
+
+
+$(".kefu_qrcode img").attr("src","/Common/common.ashx?url="+encodeURI(window.location.href));
+
+/*显示搜索框*/
+function isSearch(){
+    $(".home_search").css("opacity","1").css("z-index","1").css("right","0");
+    $(".home_top_nav").fadeOut(200);
+    $(".home_search .form-control").focus();
+}
+/*关闭搜索框*/
+function isClose(){
+    $(".home_search").css("opacity","0").css("z-index","-1").css("right","-1em");
+    $(".home_top_nav").fadeIn(1000);
+}
+
+$("#nid{SField sid="节点栏目信息数据源" FD="NodeID" page="0"/}").addClass("active")
+
+</script>

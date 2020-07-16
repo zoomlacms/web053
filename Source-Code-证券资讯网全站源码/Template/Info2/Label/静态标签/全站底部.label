@@ -1,0 +1,51 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <Table>
+    <LabelID>317</LabelID>
+    <LabelName>全站底部</LabelName>
+    <LabelType>1</LabelType>
+    <LabelCate>静态标签</LabelCate>
+    <LabelDesc />
+    <LabelParam />
+    <LabelTable />
+    <LabelField />
+    <LabelWhere />
+    <LabelOrder />
+    <LabelContent>&lt;div class="footer"&gt;
+&lt;div class="container"&gt;
+&lt;h3&gt;&lt;span&gt;友情链接&lt;/span&gt;&lt;/h3&gt;
+&lt;ul&gt;
+{ZL.Label id="友情链接列表" ShowNum="10" NodeID="5" /}
+&lt;li&gt;&lt;a href="{ZL:GetNodeLinkUrl(5)/}"&gt;More+&lt;/a&gt;&lt;/li&gt;
+&lt;div class="clearfix"&gt;&lt;/div&gt;
+&lt;/ul&gt;
+&lt;div class="footer_copy"&gt;
+{$Copyright/}
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;!--客服--&gt;
+&lt;div class="kefu hidden-xs"&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="tel:028-62613672"&gt;&lt;span&gt;联系我们&lt;/span&gt;&lt;i class="fa fa-phone"&gt;&lt;/i&gt;&lt;/a&gt;&lt;div class="clearfix"&gt;&lt;/div&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://wpa.qq.com/msgrd?v=3&amp;uin=3238203532&amp;site=qq&amp;menu=yes" target="_blank"&gt;&lt;span&gt;在线客服&lt;/span&gt;&lt;i class="fa  fa-qq"&gt;&lt;/i&gt;&lt;/a&gt;&lt;div class="clearfix"&gt;&lt;/div&gt;&lt;/li&gt;
+&lt;li class="kefu_wechat"&gt;&lt;a href="javascript:;"&gt;&lt;span&gt;&lt;img src="{$CssDir/}images/Big_Micro.jpg" alt="微信二维码" /&gt;&lt;/span&gt;&lt;i class="fa fa-wechat"&gt;&lt;/i&gt;&lt;/a&gt;&lt;div class="clearfix"&gt;&lt;/div&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="/Guest" target="_blank"&gt;&lt;span&gt;留言咨询&lt;/span&gt;&lt;i class="fa fa-pencil"&gt;&lt;/i&gt;&lt;/a&gt;&lt;div class="clearfix"&gt;&lt;/div&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;</LabelContent>
+    <LabelCount />
+    <LabelAddUser>0</LabelAddUser>
+    <LabelNodeID>0</LabelNodeID>
+    <Modeltypeinfo>计数判断</Modeltypeinfo>
+    <addroot>循环计算</addroot>
+    <setroot>等于</setroot>
+    <Modelvalue />
+    <Valueroot />
+    <IsOpen>0</IsOpen>
+    <FalseContent />
+    <DataSourceType />
+    <ConnectString />
+    <ProceName />
+    <ProceParam />
+  </Table>
+</NewDataSet>

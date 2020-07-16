@@ -1,0 +1,110 @@
+﻿{ZL.Source id="视频数据源标签"/}
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>{SField sid="视频数据源标签" FD="Title" page="0"/}_{$SiteName/}</title>
+<meta name="Keywords" content="{SField sid="节点栏目信息数据源" FD="Meta_Keywords" page="0"/}" />
+<meta name="description" content="{SField sid="节点栏目信息数据源" FD="Meta_Description" page="0"/}" />
+{ZL:Boot()/}
+<link href="{$CssDir/}global.css?Version={ZL.Label id="前端样式版本号"/}" rel="stylesheet"/>
+<script src="/js/scrolltopcontrol.js" type="text/javascript"></script>
+<script src="/JS/Controls/B_User.js"></script>
+</head>
+<style>
+#a{SField sid="视频数据源标签" FD="GeneralID" page="0"/}{ margin:auto; width:100%;height:600px;}
+</style>
+<body>
+{ZL.Label id="全站头部"/}
+<div class="container">
+<div class="video_content">
+<span class="video_s">{ZL:CutText({SField sid="视频数据源标签" FD="Title" page="0"/},50,.)/}</span>
+<h5><span style="margin-right:1em;">发布时间：{ZL:FormatDate({SField sid="视频数据源标签" FD="CreateTime" page="0"/},yyyy-MM-dd)/}</span>
+点击数：<SCRIPT language=javascript src="/Common/GetHits.aspx?id={SField sid="视频数据源标签" FD="GeneralID" page="0"/}"></SCRIPT></h5>
+<div id="a{SField sid="视频数据源标签" FD="GeneralID" page="0"/}"></div>
+<script type="text/javascript" src="/ckplayer/ckplayer.js" charset="utf-8"></script>
+<script type="text/javascript">
+    var flashvars={
+        f:'/{SField sid="视频数据源标签" FD="url" page="0"/}',
+        c:0,
+        i:'{ZL:GetPicUrl({SField sid="视频数据源标签" FD="pic" page="0"/})/}',
+        v:50
+    };
+    var params={bgcolor:'#FFF',allowFullScreen:true,allowScriptAccess:'always',wmode:'transparent'};
+    var video=['/{SField sid="视频数据源标签" FD="url" page="0"/}->video/mp4'];
+    CKobject.embed('/ckplayer/ckplayer.swf','a{SField sid="视频数据源标签" FD="GeneralID" page="0"/}','ckplayer_a1','100%','100%',false,flashvars,video,params);
+
+</script>
+</div>
+</div>
+
+<div class="container wsp"><a href="{SField sid="视频数据源标签" FD="youku" page="0"/}" target="_blank"><i class="fa fa-youtube-play" aria-hidden="true"></i> 优酷视频</a></div>
+</div>
+<div class="container">
+<div class="video_syn">{SField sid="视频数据源标签" FD="synopsis" page="0"/}</div>
+</div>
+<div class="container" >
+<div class="video_syn" style="margin-top:2em;">{SField sid="视频数据源标签" FD="content" page="0"/}</div>
+</div>
+{ZL.Label id="全站底部"/}
+</body>
+</html>
+
+<script>
+//检测固顶事件
+var IO=document.getElementById('home_nav'),Y=IO,H=0,IE6;
+IE6=window.ActiveXObject&&!window.XMLHttpRequest;
+while(Y){H+=Y.offsetTop;Y=Y.offsetParent};
+if(IE6)
+    IO.style.cssText="position:absolute;top:expression(this.fix?(document"+
+        ".documentElement.scrollTop-(this.javascript||"+H+")):0)";
+window.onscroll=function (){
+    var d=document,s=Math.max(d.documentElement.scrollTop,document.body.scrollTop);
+     if(s>H&&IO.fix||s<=H&&!IO.fix)return;
+    if(!IE6)IO.style.position=IO.fix?"":"fixed";        
+    IO.fix=!IO.fix;
+};
+try{document.execCommand("BackgroundImageCache",false,true)}catch(e){};
+
+
+$(function () {//手机下右侧导航菜单效果
+    $('button.navbar-toggle').click(function () {
+        $('body').toggleClass('out');
+        $('nav.navbar-fixed-top').toggleClass('out');
+        if ($('body').hasClass('out')) {
+            $(this).focus();
+        }
+        else {
+            $(this).blur();
+        }
+    });
+});
+$(document).click(function (e) {
+    if (!$(e.target).closest('.navbar-collapse, button.navbar-toggle').length && $('body').hasClass('out')) {
+        e.preventDefault();
+        $('button.navbar-toggle').trigger('click');
+    }
+}).keyup(function (e) {
+    if (e.keyCode == 27 && $('body').hasClass('out')) {
+        $('button.navbar-toggle').trigger('click');
+    }
+});
+
+
+$(".kefu_qrcode img").attr("src","/Common/common.ashx?url="+encodeURI(window.location.href));
+
+/*显示搜索框*/
+function isSearch(){
+    $(".home_search").css("opacity","1").css("z-index","1").css("right","0");
+    $(".home_top_nav").fadeOut(200);
+    $(".home_search .form-control").focus();
+}
+/*关闭搜索框*/
+function isClose(){
+    $(".home_search").css("opacity","0").css("z-index","-1").css("right","-1em");
+    $(".home_top_nav").fadeIn(1000);
+}
+
+$("#nid3").addClass("active")
+
+</script>

@@ -1,0 +1,41 @@
+﻿{ZL.Source id="节点栏目信息数据源"/}
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="msapplication-TileColor" content="#1A0066"/>
+<meta name="msapplication-TileImage" content="/images/win8_symbol_140x140.png"/>
+<title>{SField sid="节点栏目信息数据源" FD="NodeName" page="0"/}_{$SiteTitle/}</title>
+{$MetaKeywords/}
+{$MetaDescription/}
+{ZL:Boot()/}
+<link href="{$CssDir/}global.css?id={ZL.Label id="前端样式版本号"/}" rel="stylesheet"/>
+<script src="/js/scrolltopcontrol.js"></script>
+</head> 
+<body class="ld_bg">
+<div class="ld_banner">
+<div class="btn_apply"><a href="#"><img src="{$CssDir/}images/btn_apply.jpg" alt="盘中雷达"></a></div>
+<p></p>
+</div>
+
+<div class="ld_list1 container"></div>
+<div class="ld_list2 container"></div>
+<div class="ld_bottom"></div>
+
+<!--客服-->
+
+<div class="kefu hidden-xs">
+<ul>
+<li><a href="tel:028-62613672"><span>联系我们</span><i class="fa fa-phone"></i></a><div class="clearfix"></div></li>
+<li><a href="http://wpa.qq.com/msgrd?v=3&uin=3238203532&site=qq&menu=yes" target="_blank"><span>在线客服</span><i class="fa  fa-qq"></i></a><div class="clearfix"></div></li>
+<li class="kefu_wechat"><a href="javascript:;"><span><img src="{$CssDir/}images/Big_Micro.jpg" alt="微信二维码" /></span><i class="fa fa-wechat"></i></a><div class="clearfix"></div></li>
+<li><a href="/Guest" target="_blank"><span>留言咨询</span><i class="fa fa-pencil"></i></a><div class="clearfix"></div></li>
+</ul>
+</div>
+</body>
+</html>
+
+<script>
+
+$("#nid{SField sid="节点栏目信息数据源" FD="NodeID" page="0"/}").addClass("active")
+</script>
